@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Фрактал{% endblock %}
+
+{% block content %}
+<h1 style="line-height: 0.5"> Движение через фрактал</h1>
+   <form action="{{ url_for('make_fractal') }}" method="POST" enctype="multipart/form-data">
+    <label for='Figure_Type'> Тип фрактала:</label>
+    <select name='Figure_Type'>
+        <option>Fractal Tree</option>
+        <option>Sierpinski Triangle</option>
+        <option>Koch Line</option>
+         <option>Koch Triangle</option>
+        <select>
+   <br><label for="level">Уровень:</label>
+            <input name='Level' type="number" value="1" style="width:35px"></br>
+            <input type="submit"  name="Submit" value="Нарисовать"></select>
+         {% endblock %}

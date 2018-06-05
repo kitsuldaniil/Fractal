@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}Фрактал{% endblock %}
+
+{% block content %}
+<h1> Результат</h1>
+   <br><img src={{url_for('static', filename="temp.png")}}></br>
+    <a href="{{ url_for('home') }}" style="font-size: 18px">На главную</a>
+         {% endblock %}
